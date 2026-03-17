@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./dist/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vapi-widget</title>
+  </head>
+  <body>
+    <script>
+      window.process = {
+        env: { NODE_ENV: "production" },
+        browser: true,
+        version: "",
+        nextTick: (cb) => setTimeout(cb, 0),
+      };
+    </script>
+    <script src="./dist/vapi-widget.iife.js"></script>
+
+    <div id="app">
+      <vapi-widget public-key="535cb740-724d-47bd-8217-97de63042904" assistant-id="f97d7349-4fa1-4c62-96d5-53be7325b0e8"> </vapi-widget>
+    </div>
+  </body>
+</html>
